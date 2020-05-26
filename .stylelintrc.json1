@@ -26,7 +26,6 @@
         ]
       },
       {
-        "emptyLineBefore": "always",
         "properties": [
           "box-sizing",
           "display"

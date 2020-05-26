@@ -1,64 +1,77 @@
+$base-color: #c6538c;
 body {
-  position: relative;
-  z-index: 20;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 0;
-  margin: 0;
-  background-color: #0f0f0f;
+   position: $pos;
+   z-index: 20;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   margin: 0;
+   padding: 0;
+
+   background-color: $base-color;
 }
 
 label {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 290px;
-  height: 290px;
-  cursor: pointer;
-  border-radius: 50%;
+   position: relative;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 290px;
+   height: 290px;
+
+   border-radius: 50%;
+   cursor: pointer;
 }
 
 span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: #1b1b1b;
-  border-radius: 50%;
-  box-shadow: 0 3px 4px #000, inset 0 -2px 5px #000, inset 0 2px 2px #fff, 0 0 0 2px #000, 0 0 0 15px #080808;
+   position: absolute;
+   top: 0;
+   left: 0;
+
+   display: block;
+   width: 100%;
+   height: 100%;
+
+   background-color: #1b1b1b;
+   border-radius: 50%;
+   box-shadow: 0 3px 4px #000,
+   inset 0 -2px 5px #000,
+   inset 0 2px 2px #fff,
+   0 0 0 2px #000,
+   0 0 0 15px #080808;
 }
 
 svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 1;
-  width: 200px;
-  transform: translate(-50%, -50%);
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   z-index: 1;
+
+   width: 200px;
+
+   transform: translate(-50%, -50%);
 }
 
 input {
-  display: none;
+   display: none;
 
-  &:checked ~ svg {
-    filter: drop-shadow(0 0 10px #00a1ff) drop-shadow(0 0 30px #00a1ff);
-    fill: #00ffe7;
-  }
+   &:checked ~ svg {
+      filter: drop-shadow(0 0 10px #00a1ff) drop-shadow(0 0 30px #00a1ff);
 
-  &:checked ~ span {
-    box-shadow:
- 0 0 0 #000,
- inset 0 -5px 5px #000,
- inset 0 2px 2px #fff,
- 0 0 0 10px #000,
- 0 0 40px 10px #00a1ff,
+      fill: #00ffe7;
+   }
+
+   &:checked ~ span {
+      box-shadow: 0 0 0 #000,
+      inset 0 -5px 5px #000,
+      inset 0 2px 2px #fff,
+      0 0 0 10px #000,
+      0 0 40px 10px #00a1ff,
       0 0 0 10px #080808,
- 0 0 0 12px #00a1ff;
-  }
+      0 0 0 12px #00a1ff;
+   }
 }
